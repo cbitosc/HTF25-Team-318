@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎨 Portfolio Website Builder</h1>
+            <p>Create Your Professional Portfolio in Minutes</p>
+        </div>
+        <div class="main-content">
+            <div class="form-section">
+                <h2 style="margin-bottom: 25px; color: #333;">Your Information</h2>
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="title">Professional Title</label>
+                    <input type="text" id="title" placeholder="Full Stack Developer">
+                </div>
+                <div class="form-group">
+                    <label for="bio">About Me</label>
+                    <textarea id="bio" placeholder="Tell us about yourself..." rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="your.email@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Add Skills</label>
+                    <div style="display: flex; gap: 10px;">
+                        <input type="text" id="skillInput" placeholder="e.g., JavaScript">
+                        <button type="button" class="btn" onclick="addSkill()">Add</button>
+                    </div>
+                    <div id="skillsContainer"></div>
+                </div>
+                <div class="form-group">
+                    <label>Add Projects</label>
+                    <div class="input-row">
+                        <input type="text" id="projectTitle" placeholder="Project Title">
+                        <input type="text" id="projectLink" placeholder="Project URL">
+                    </div>
+                    <textarea id="projectDesc" placeholder="Project Description" style="margin-bottom: 10px;"></textarea>
+                    <button type="button" class="btn" onclick="addProject()">Add Project</button>
+                    <div id="projectsContainer"></div>
+                </div>
+                <div class="form-group">
+                    <label>Social Links</label>
+                    <input type="text" id="github" placeholder="GitHub URL">
+                    <input type="text" id="linkedin" placeholder="LinkedIn URL" style="margin-top: 10px;">
+                    <input type="text" id="twitter" placeholder="Twitter URL" style="margin-top: 10px;">
+                </div>
+            </div>
+            <div class="preview-section">
+                <!-- <h2 style="margin-bottom: 25px; color: #333;">Live Preview</h2> -->
+                <div id="preview">
+                    <div class="empty-state">Start filling the form to see your portfolio preview</div>
+                </div>
+            </div>
+        </div>
+        <div class="download-section">
+            <h2 style="margin-bottom: 20px; color: #333;">Ready to Download?</h2>
+            <div class="action-buttons">
+                <button class="btn btn-success" onclick="downloadPortfolio()">📥 Download Portfolio</button>
+                <button class="btn" onclick="previewFullPage()">👁️ View Full Page</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
